@@ -1,6 +1,7 @@
 class DueNotificationMailer < ApplicationMailer
 
  def notify_due
+   puts "hello"
    if Date.new(@account.due) < Date.new - 10.days
      @account = account
      @admin = admin_users
