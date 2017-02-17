@@ -2,10 +2,10 @@ class DueNotificationMailer < ApplicationMailer
 
  def notify_due
    puts "hello"
-   if Date.new(@account.due) < Date.new - 10.days
-     @account = account
-     @admin = admin_users
-     mail_to :admin.email, subject: "A Due Payment is Soon!"
+   Account.each do |account|
+     if Date.new(@account.due) < Date.new - 10.days
+       mail_to :admin.email, subject: "A Due Payment is Soon!"
+     end
    end
  end
 
