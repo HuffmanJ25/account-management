@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'pg'
+gem 'figaro'
 
 
 group :development, :test do

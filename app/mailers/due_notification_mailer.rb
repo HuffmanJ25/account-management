@@ -9,7 +9,7 @@ class DueNotificationMailer < ApplicationMailer
        if a.due == Date.today + 10.days
          puts a.amount
          @a = a
-         mail( to: @admin, subject: a.customer + " Upcoming Payment")
+         mail( to: 'huffmanj25@gmail.com', subject: a.customer + " Upcoming Payment")
        end
      end
    end
